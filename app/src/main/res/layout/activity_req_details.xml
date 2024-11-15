@@ -1,0 +1,151 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:paddingRight="35dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Your Ride,"
+            android:visibility="gone"
+            android:textColor="@color/tikdark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_below="@+id/textView"
+            android:text="Let others join your journey!"
+            android:textColor="@color/tiklightgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- Start and End Point Map -->
+    <fragment
+        android:id="@+id/mapdetails"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp" />
+
+    <!-- Ride Details ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Requester Name -->
+            <TextView
+                android:id="@+id/edt_req_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- Seat Number -->
+            <TextView
+                android:id="@+id/edt_seat_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- AC or Non-AC Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radio_group_ac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AC"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_non_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non-AC" />
+            </RadioGroup>
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|center"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:hint="Select Date"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="false" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/edt_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/btnstartpoinnt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Navigate Start Point"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn_accept_ride"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Accept Ride"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

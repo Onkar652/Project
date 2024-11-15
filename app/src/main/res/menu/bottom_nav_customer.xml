@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/vprovider"
+        android:title="Providers"
+        android:icon="@drawable/baseline_support_agent_24"/>
+    <item
+        android:id="@+id/myreq"
+        android:title="MyReq"
+        android:icon="@drawable/baseline_car_rental_24"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_featured_play_list_24"/>
+    <item
+        android:id="@+id/ContactUs"
+        android:title="About"
+        android:icon="@drawable/baseline_info_24"/>
+
+    <!--    <item-->
+    <!--        android:id="@+id/aboutUs"-->
+    <!--        android:title="AboutUs"-->
+    <!--        android:icon="@drawable/baseline_info_24"/>-->
+
+</menu>

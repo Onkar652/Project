@@ -1,0 +1,173 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:paddingRight="35dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Your Ride,"
+            android:visibility="gone"
+            android:textColor="@color/tikdark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_below="@+id/textView"
+            android:text="Let others join your journey!"
+            android:textColor="@color/tiklightgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtfrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Your Ride Start and End Point,"
+        android:textColor="@color/tikdark"
+        android:textSize="20sp" />
+
+    <!-- From -->
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapstart"
+        android:layout_margin="10dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        />
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingBottom="60dp"
+        android:clipToPadding="false"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <!-- Seat Number -->
+        <EditText
+            android:id="@+id/edt_req_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/roundded_button"
+            android:drawablePadding="09dp"
+            android:hint="Requester Name"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/tiklightgray"
+            android:textSize="14sp" />
+    <!-- Seat Number -->
+    <EditText
+        android:id="@+id/edt_seat_number"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="09dp"
+        android:hint="Seat Number"
+        android:inputType="number"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/tiklightgray"
+        android:textSize="14sp" />
+
+    <!-- AC or Non-AC Radio Buttons -->
+    <RadioGroup
+        android:id="@+id/radio_group_ac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radio_ac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AC"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio_non_ac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Non-AC" />
+    </RadioGroup>
+
+    <!-- Date -->
+    <!-- Date -->
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="start|center"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="09dp"
+        android:hint="Select Date"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/tiklightgray"
+        android:textSize="14sp"
+        android:clickable="true"
+        android:focusable="false" />
+
+    <!-- Time -->
+    <EditText
+        android:id="@+id/edt_time"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="09dp"
+        android:hint="Time"
+        android:inputType="time"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/tiklightgray"
+        android:textSize="14sp" />
+
+    <!-- Additional Parameters (Add as needed) -->
+    <!-- <EditText
+        android:id="@+id/edt_additional_param"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundded_button"
+        android:drawablePadding="09dp"
+        android:hint="Additional Parameter"
+        android:inputType="text"
+        android:padding="8dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/tiklightgray"
+        android:textSize="14sp" /> -->
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/btn_submit_ride"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Share Ride"
+        android:textAllCaps="false" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

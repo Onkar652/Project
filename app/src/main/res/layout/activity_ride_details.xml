@@ -1,0 +1,242 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginTop="5dp"
+        android:paddingRight="35dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Your Ride,"
+            android:visibility="gone"
+            android:textColor="@color/tikdark"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txtsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:layout_below="@+id/textView"
+            android:text="Let others join your journey!"
+            android:textColor="@color/tiklightgray"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <!-- Start and End Point Map -->
+    <fragment
+        android:id="@+id/mapdetails"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="10dp" />
+
+    <!-- Ride Details ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Requester Name -->
+            <TextView
+                android:id="@+id/edt_req_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- Seat Number -->
+            <TextView
+                android:id="@+id/edt_seat_number"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- AC or Non-AC Radio Buttons -->
+            <RadioGroup
+                android:id="@+id/radio_group_ac"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AC"
+                    android:checked="true" />
+
+                <RadioButton
+                    android:id="@+id/radio_non_ac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non-AC" />
+            </RadioGroup>
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:gravity="start|center"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:hint="Select Date"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp"
+                android:clickable="true"
+                android:focusable="false" />
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/edt_time"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+
+            <!-- Submit Button -->
+        <LinearLayout
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_below="@+id/top"
+            android:background="#E8CAF8"
+            android:id="@+id/middle"
+            android:layout_marginTop="45dp">
+            <TextView
+                android:id="@+id/txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Cab Provider Details:-"
+                android:visibility="visible"
+                android:textColor="@color/TextColor"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:layout_marginTop="05dp"
+                android:visibility="visible"
+               />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/baseline_emoji_transportation_24"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/email"
+                    android:text="Wiliam@gmail.com"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/baseline_phone_android_24"/>
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/phone"
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="+266 225 225"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="25dp"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/common_google_signin_btn_icon_dark_normal"/>
+                <TextView
+                    android:textStyle="bold"
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="Farmer from Barshi"/>
+            </LinearLayout>
+        </LinearLayout>
+
+            <!-- Seat Number -->
+            <EditText
+                android:id="@+id/edtpayment"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/roundded_button"
+                android:drawablePadding="09dp"
+                android:hint="Enter Ride Amount"
+                android:inputType="numberDecimal"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/tiklightgray"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/btnpaymetn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Do Payment"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

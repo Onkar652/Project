@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/request"
+        android:title="Requests"
+        android:icon="@drawable/baseline_request_page_24"/>
+
+    <item
+        android:id="@+id/vehicles"
+        android:title="Vehicles"
+        android:icon="@drawable/baseline_directions_car_24"/>
+
+    <item
+        android:id="@+id/myrides"
+        android:title="MyRides"
+        android:icon="@drawable/baseline_car_rental_24"/>
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_featured_play_list_24"/>
+
+<!--    <item-->
+<!--        android:id="@+id/aboutUs"-->
+<!--        android:title="AboutUs"-->
+<!--        android:icon="@drawable/baseline_info_24"/>-->
+
+</menu>

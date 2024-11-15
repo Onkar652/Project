@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/top"
+                android:layout_height="wrap_content">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_centerVertical="true"
+                    android:elevation="5dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="cabbooth.json"
+                    app:lottie_loop="true" />
+                <View
+                    android:layout_width="match_parent"
+                    android:background="@color/lightgreen"
+                    android:layout_below="@+id/lottie"
+                    android:id="@+id/divider"
+                    android:layout_margin="15dp"
+                    android:layout_height="1dp"></View>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/header"
+                    android:visibility="visible"
+                    android:paddingLeft="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/divider"
+                    android:paddingRight="35dp">
+
+                    <TextView
+                        android:id="@+id/txtname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome ****"
+                        android:visibility="visible"
+                        android:textColor="@color/tikdark"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/txtsmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="05dp"
+                        android:layout_below="@+id/txtname"
+                        android:text="Let others join your journey!"
+                        android:textColor="@color/tiklightgray"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="360dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_below="@+id/top"
+                android:id="@+id/middle"
+                android:layout_marginTop="45dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/baseline_emoji_transportation_24"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:id="@+id/email"
+                        android:text="Wiliam@gmail.com"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/baseline_phone_android_24"/>
+                    <TextView
+                        android:textStyle="bold"
+                        android:id="@+id/phone"
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:text="+266 225 225"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/common_google_signin_btn_icon_dark_normal"/>
+                    <TextView
+                        android:textStyle="bold"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:text="Farmer from Barshi"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnlogut"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginStart="35dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="35dp"
+                android:layout_below="@+id/middle"
+                android:background="@drawable/signupshape"
+                android:text="Logout"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

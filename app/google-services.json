@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "538345282108",
+    "project_id": "bookcab-6e51e",
+    "storage_bucket": "bookcab-6e51e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:538345282108:android:dc6f65155e850a838e4139",
+        "android_client_info": {
+          "package_name": "com.bit.bookcab"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ltPqaootzik8UEtR-nclBG_zpkK8m4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
